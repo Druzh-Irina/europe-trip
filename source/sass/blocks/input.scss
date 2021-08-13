@@ -1,0 +1,46 @@
+.input {
+  outline: none;
+  padding: 15px;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 17px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.input--feedback {
+  width: 270px;
+  color: $basic-darkest;
+  border: 1px solid rgba($basic-dark, 0.3);
+
+  @media (max-width: $mobile-width) {
+    width: 288px;
+  }
+
+  &::placeholder {
+    color: $basic-darkest;
+  }
+}
+
+.input--modal {
+  width: 100%;
+  margin-bottom: 20px;
+  color: $additional-dark;
+  border: 1px solid $line-grey;
+
+  &::placeholder {
+    color: $additional-dark;
+  }
+}
+
+.input--tel {
+  padding-left: 26px;
+}
+
+
+.input__error-message {
+  position: absolute;
+}

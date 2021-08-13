@@ -1,0 +1,7 @@
+.page-main {
+  margin-bottom: 95px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 31px;
+  }
+}

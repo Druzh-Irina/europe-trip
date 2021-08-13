@@ -1,0 +1,57 @@
+.site-nav {
+  @include reset-list;
+  display: flex;
+  align-items: center;
+  background-color: $basic-white;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 84px;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.site-nav__item {
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+.site-nav__link {
+  display: block;
+  padding: 20px;
+  position: relative;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 500;
+  color: $basic-darkest;
+  text-decoration: none;
+
+  @media (max-width: $tablet-width) {
+    padding: 16px;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 600;
+    color: $additional-dark;
+    background: $bg-light-grey;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 22px;
+      margin: auto;
+      width: 13px;
+      height: 8px;
+      background: url("../img/arrow-right.svg") center no-repeat;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $basic-accent;
+  }
+}

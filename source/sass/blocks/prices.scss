@@ -1,0 +1,113 @@
+.prices {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -270px;
+  margin-bottom: 138px;
+  padding-top: 20px;
+
+  @media (max-width: $tablet-width) {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 124px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 50px;
+  }
+}
+
+.prices__tours {
+  @include reset-list;
+  margin-right: 30px;
+  order: -1;
+  display: flex;
+
+  @media (max-width: $tablet-width) {
+    order: initial;
+    margin-right: 0;
+  }
+}
+
+.prices__wrapper {
+  width: 300px;
+  margin-right: -11px;
+  margin-top: 25px;
+
+  @media (max-width: $tablet-width) {
+    width: auto;
+    margin-right: 0;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 37px;
+  }
+}
+
+.prices__heading {
+  @include heading-style;
+  padding-bottom: 22px;
+  margin-bottom: 30px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.prices__description {
+  @include description-style;
+  margin-bottom: 60px;
+  line-height: 27.2px;
+  letter-spacing: normal;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 19px;
+  }
+}
+
+.prices__call-us {
+  @include offset;
+  margin-left: 45px;
+  margin-bottom: 12px;
+  font-size: 22px;
+  line-height: 34px;
+  font-weight: 500;
+  color: $basic-darkest;
+
+  @media (max-width: $tablet-width) {
+    margin-left: 0;
+    font-size: 18px;
+  }
+}
+
+.prices__phone {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  line-height: 32px;
+  color: $basic-black;
+  text-decoration: none;
+
+  @media (max-width: $tablet-width) {
+    display: block;
+    font-size: 18px;
+    color: $basic-accent;
+    text-decoration: underline;
+  }
+}
+
+.prices__phone-icon {
+  fill: $basic-accent;
+  margin-right: 30px;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}

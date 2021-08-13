@@ -1,0 +1,32 @@
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper--tel {
+  position: relative;
+
+  &::after {
+    content: "*";
+    font-family: "Montserrat", "Verdana", sans-serif;
+    position: absolute;
+    top: 0;
+    left: 16px;
+    font-size: 14px;
+    font-weight: 700;
+    color: $basic-accent;
+  }
+}
+
+.input-wrapper__error {
+  font-family: "Montserrat", "Verdana", sans-serif;
+  position: absolute;
+  top: -27px;
+  font-size: 12px;
+  line-height: 15px;
+  color: $basic-accent;
+  display: none;
+}
+
+.input-wrapper__error--show {
+  display: block;
+}

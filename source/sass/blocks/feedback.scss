@@ -1,0 +1,106 @@
+.feedback {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background: url("../img/bg-feedback-desktop.jpg") 52px center / contain no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bg-feedback-desktop@2x.jpg");
+  }
+
+  @media (max-width: $tablet-width) {
+    display: block;
+    min-height: 0;
+    padding: 70px 55px 75px;
+    background: url("../img/bg-feedback-tablet.jpg") center / cover no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-feedback-tablet@2x.jpg");
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0;
+    background: none;
+  }
+}
+
+.feedback__block {
+  width: 556px;
+  margin-right: -11px;
+  text-align: center;
+  padding: 50px;
+  background-color: $basic-white;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba($feedback-shadow, 0.1);
+
+  @media (max-width: $tablet-width) {
+    margin: 0 auto;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 50px 16px;
+    width: auto;
+    box-shadow: none;
+    border-radius: 0;
+    background-color: $bg-light-grey;
+  }
+}
+
+.feedback__questions {
+  @include offset;
+  margin-bottom: 10px;
+  font-size: 25px;
+  line-height: 32px;
+  font-weight: 600;
+  color: $basic-darkest;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 15px;
+  }
+}
+
+.feedback__text {
+  @include offset;
+  margin-bottom: 25px;
+  font-size: 16px;
+  line-height: 24px;
+  color: $basic-darkest;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 22px;
+  }
+}
+
+.feedback__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 26px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 21px;
+  }
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3px;
+  }
+}
+
+.feedback__button {
+  width: 176px;
+  margin: 0 auto;
+  padding: 18px;
+  letter-spacing: 2px;
+  border: none;
+
+  @media (max-width: $tablet-width) {
+    width: 250px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 288px;
+  }
+}

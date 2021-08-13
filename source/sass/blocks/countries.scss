@@ -1,0 +1,134 @@
+.countries {
+  padding-bottom: 490px;
+  background: url("../img/bg-countries.svg") center 130px / 1444px auto no-repeat;
+
+  @media (max-width: $tablet-width) {
+    min-height: auto;
+    margin-bottom: 30px;
+    padding-bottom: 0;
+    background: none;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 11px;
+  }
+}
+
+.countries__container {
+  @media (max-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.countries__list {
+  @include reset-list;
+}
+
+.countries__item {
+  display: none;
+}
+
+.countries__item--selected {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+
+  @media (max-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.countries__content {
+  margin-right: 100px;
+  position: relative;
+  z-index: $zindex-countries;
+
+  @media (max-width: $tablet-width) {
+    margin-right: 0;
+    margin-bottom: 30px;
+    padding: 0 20px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 47px;
+    padding: 0 16px;
+  }
+}
+
+.countries__title {
+  @include heading-style;
+  margin-bottom: 30px;
+  padding-bottom: 23px;
+  letter-spacing: -1.25px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.countries__description {
+  @include description-style;
+  max-width: 370px;
+  margin-bottom: 50px;
+  letter-spacing: -0.47px;
+
+  @media (max-width: $tablet-width) {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.countries__button {
+  width: 250px;
+
+  @media (max-width: $tablet-width) {
+    margin: 0 auto;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 288px;
+  }
+}
+
+.countries__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: $zindex-countries-image;
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+.countries__wrapper {
+  min-height: 595px;
+  flex-grow: 1;
+  position: relative;
+  align-self: flex-start;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  @media (max-width: $tablet-width) {
+    display: block;
+    min-height: 0;
+    padding-top: 77px;
+    overflow: hidden;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 50px;
+  }
+}
+
+.countries__review {
+  position: relative;
+  z-index: $zindex-countries;
+
+  @media (max-width: $tablet-width) {
+    margin: 0 auto;
+  }
+}

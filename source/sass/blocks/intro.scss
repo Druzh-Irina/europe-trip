@@ -1,0 +1,135 @@
+.intro {
+  min-height: 860px;
+  margin-bottom: 200px;
+  background: $bg-intro url("../img/bg-intro-desktop.jpg") center top / cover no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bg-intro-desktop@2x.jpg");
+  }
+
+  @media (max-width: $tablet-width) {
+    min-height: 344px;
+    margin-bottom: 80px;
+    background: $bg-intro url("../img/bg-intro-tablet.jpg") center top / cover no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-intro-tablet@2x.jpg");
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    min-height: 344px;
+    margin-bottom: 107px;
+    background: none;
+  }
+}
+
+.intro__container {
+  @media (max-width: $mobile-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.intro__content {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: 70px;
+  padding-top: 185px;
+
+  @media (max-width: $tablet-width) {
+    max-width: 100%;
+    margin-right: 0;
+    padding-top: 60px;
+    text-align: center;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 0;
+  }
+}
+
+.intro__heading {
+  @include offset;
+  margin-bottom: 30px;
+  font-size: 55px;
+  line-height: 80px;
+  font-weight: 600;
+  color: $basic-white;
+  letter-spacing: -1.1px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 15px;
+    font-size: 30px;
+    line-height: 45px;
+    letter-spacing: normal;
+  }
+
+  @media (max-width: $mobile-width) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 235px;
+    margin-bottom: 22px;
+    padding: 0 15px;
+    font-size: 24px;
+    line-height: 36px;
+    background: $bg-intro url("../img/bg-intro-mobile.jpg") center top no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-intro-mobile@2x.jpg");
+    }
+  }
+}
+
+.intro__description {
+  margin-bottom: 35px;
+  padding-right: 60px;
+  font-size: 16px;
+  line-height: 27px;
+  color: $basic-white;
+  letter-spacing: -0.5px;
+
+  @media (max-width: $tablet-width) {
+    max-width: 400px;
+    margin: 0 auto 10px;
+    padding-right: 0;
+    font-size: 16px;
+    line-height: 27px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 20px;
+    padding: 0 15px;
+    color: $basic-dark;
+  }
+}
+
+.intro__button {
+  width: 340px;
+  position: relative;
+  text-align: left;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 42px;
+    margin: auto;
+    width: 14px;
+    height: 14px;
+    background: url("../img/arrow-down.svg") center no-repeat;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 250px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 288px;
+  }
+}

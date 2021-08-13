@@ -1,0 +1,149 @@
+.places {
+  @media (max-width: $tablet-width) {
+    margin-bottom: 78px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 40px;
+  }
+}
+
+.places__heading {
+  @include heading-style;
+  max-width: 380px;
+  margin-bottom: 31px;
+  letter-spacing: -1.25px;
+
+  @media (max-width: $tablet-width) {
+    margin: 0 auto 20px;
+  }
+
+  &::after {
+    width: 230px;
+    height: 4px;
+  }
+}
+
+.places__description {
+  @include description-style;
+  max-width: 380px;
+  margin-bottom: 55px;
+  letter-spacing: -0.46px;
+
+  @media (max-width: $tablet-width) {
+    margin: 0 auto 40px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin: 0 auto 20px;
+  }
+}
+
+.places__list {
+  @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: -60px;
+
+  @media (max-width: $tablet-width) {
+    margin-left: -30px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-left: 0;
+  }
+}
+
+.places__item {
+  height: 430px;
+  margin-left: 60px;
+  margin-bottom: 100px;
+  position: relative;
+  background-color: $bg-places;
+
+  @media (max-width: $tablet-width) {
+    height: 425px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-left: 0;
+    margin-bottom: 35px;
+  }
+}
+
+.places__item:last-child {
+  margin-left: 120px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 10px;
+    margin-left: 30px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin: 0;
+  }
+}
+
+.places__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.places__link {
+  &:hover,
+  &:focus {
+    .places__message {
+      display: flex;
+      z-index: $zindex-places-message;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: transparentize($color: $basic-darkest, $amount: 0.4);
+      z-index: $zindex-places-hover;
+    }
+  }
+}
+
+.places__message {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 266px;
+  height: 77px;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: $basic-white;
+  border: 1px solid transparentize($color: $basic-white, $amount:  0.3);
+}
+
+.places__title {
+  @include offset;
+  padding: 18px 10px 15px;
+  position: absolute;
+  min-width: 195px;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 500;
+  letter-spacing: -0.41px;
+  text-align: center;
+  color: $basic-dark;
+  background-color: $basic-white;
+}

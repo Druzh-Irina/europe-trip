@@ -1,0 +1,66 @@
+@mixin offset {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin heading-style {
+  @include offset;
+  padding-bottom: 33px;
+  position: relative;
+  font-size: 55px;
+  line-height: 80px;
+  font-weight: 600;
+  color: $basic-dark;
+
+  @media (max-width: $tablet-width) {
+    padding-bottom: 0;
+    font-size: 30px;
+    line-height: 45px;
+    letter-spacing: normal;
+    text-align: center;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 175px;
+    height: 3px;
+    background-color: $basic-accent;
+
+    @media (max-width: $tablet-width) {
+      display: none;
+    }
+  }
+}
+
+@mixin description-style {
+  @include offset;
+  font-size: 16px;
+  line-height: 28px;
+  color: transparentize($color: $basic-dark, $amount: 0.3);
+
+  @media (max-width: $tablet-width) {
+    text-align: center;
+  }
+}
+
+@mixin footer-headings-style {
+  @include offset;
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 600;
+  color: $basic-darkest;
+}
