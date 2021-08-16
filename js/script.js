@@ -28,7 +28,7 @@ tabs.forEach((tab) => {
   });
 });
 
-// Переключение табов при клике на якорные ссылки из раздела "Места посещения" (выше табов)
+// Переключение табов при клике на якорные ссылки из раздела "Места посещения"
 const placesLinks = document.querySelectorAll('.places__link');
 placesLinks.forEach((elem) => {
   elem.addEventListener('click', () => {
