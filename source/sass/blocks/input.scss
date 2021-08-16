@@ -11,6 +11,23 @@
   }
 }
 
+// убирает авто-иконки в браузере Safari
+.input::-webkit-contacts-auto-fill-button {
+  visibility: hidden;
+  display: none;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
+
+// убирает авто-иконки в браузерах
+.input::-ms-clear,
+.input::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
 .input--feedback {
   width: 270px;
   color: $basic-darkest;

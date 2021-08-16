@@ -162,7 +162,7 @@
               <h3 class="countries__title">Греция</h3>
               <p class="countries__description">На севере Греции находится один из крупнейших комплексов монастырей,
                 расположенных на вершинах скал. Название его «Метеора» буквально переводится как «висящие в воздухе».
-                Этот монастырь основная цель нашего путешествия в Греции. После покорения скал из песчанника
+                Этот монастырь основная цель нашего путешествия в Греции. После покарения скал из песчанника
                 и обломочной горной породы, достигающих в высоту 600 метров,
                 наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры.</p>
               <a class="countries__button button button--buy" href="">Купить тур сейчас</a>
@@ -248,7 +248,7 @@
               <h3 class="countries__title">Македония</h3>
               <p class="countries__description">В Македонии нашей целью будет посетить Палаошник, который расположился в
                 удивительно красивой лесистой местности возле Охридского озера и Самуиловой твердыни. А также мы
-                заберемся на вершину горы Татичев Камен, где находится археологический памятник Кокино в длину около
+                заберемся на вершину горы Татичев Камен где находится археологический памятник Кокино в длину около
                 100 метров.</p>
               <a class="countries__button button button--buy" href="">Купить тур сейчас</a>
             </div>
@@ -475,12 +475,14 @@
           <div class="feedback__wrapper">
             <div class="input-wrapper input-wrapper--tel">
               <p class="input-wrapper__error">Данные не верны</p>
-              <input class="input input--feedback input--tel" name="tel" type="tel" pattern="^\+7\d{3}\d{7}$"
+              <label for="phone" class="visually-hidden">Введите номер телефона</label>
+              <input class="input input--feedback input--tel" name="tel" type="tel" id="phone" pattern="^\+7\d{3}\d{7}$"
                 placeholder="+7  Введите 10 цифр номера" aria-label="Поле для ввода номера телефона" required>
             </div>
             <div class="input-wrapper">
               <p class="input-wrapper__error">Данные не верны</p>
-              <input class="input input--feedback input--email" type="email" placeholder="E-mail"
+              <label for="email" class="visually-hidden">Введите адрес электронной почты</label>
+              <input class="input input--feedback input--email" type="email" id="email" placeholder="E-mail"
                 aria-label="Поле для ввода адреса электронной почты">
             </div>
           </div>
@@ -541,12 +543,14 @@
         <h2 class="modal__heading">Купить тур</h2>
         <div class="input-wrapper input-wrapper--tel">
           <p class="input-wrapper__error">Данные не верны</p>
-          <input class="input input--modal input--tel" name="tel" type="tel" pattern="^\+7\d{3}\d{7}$"
+          <label for="telephone" class="visually-hidden">Введите номер телефона</label></label>
+          <input class="input input--modal input--tel" name="tel" type="tel" id="telephone" pattern="^\+7\d{3}\d{7}$"
             placeholder="+7  Введите 10 цифр номера" aria-label="Поле для ввода номера телефона" required>
         </div>
         <div class="input-wrapper">
           <p class="input-wrapper__error">Данные не верны</p>
-          <input class="input input--modal input--email" type="email" placeholder="E-mail"
+          <label for="mail" class="visually-hidden">Введите адрес электронной почты</label>
+          <input class="input input--modal input--email" type="email" id="mail" placeholder="E-mail"
             aria-label="Поле для ввода адреса электронной почты">
         </div>
         <button class="modal__button button button--submit" type="submit">Отправить</button>
@@ -560,6 +564,6 @@
     <button class="modal__close" aria-label="Закрыть окно"></button>
   </section>
 
-  <script src="js/script.js"></script>
+  <script src="js/script.min.js"></script>
 </body>
 </html>
