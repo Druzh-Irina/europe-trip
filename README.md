@@ -14,9 +14,12 @@
 * Desktop first (проект выполнен в мобильной, планшетной и Desktop версиях)
 * Vanilla JS
 * Кроссбраузерность
-* Работа с ускорением производительности верстки (оптимизация шрифтов, LightHouse, Google PageSpeed)
+* Оптимизация шрифтов
 * Сборка Gulp
+* ESLint
 * Node.js и npm
+* Browsersync
+* DevTools (анализ кода из браузера)
 * Работа с Git
 
 ## Запуск и сборка
@@ -27,5 +30,5 @@
 
 ## Обзор проекта
 
-https://irinadruzhinina.github.io/Druzhinina_EuropeTrip/
+https://druzh-irina.github.io/europe-trip/
 
